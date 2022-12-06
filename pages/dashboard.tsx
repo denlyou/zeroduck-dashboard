@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import DashboardContents from '../components/dashboard'
 import AsideMenu from '../components/layouts/AsideMenu'
 
 export default function Dashboard() {
@@ -14,6 +15,7 @@ export default function Dashboard() {
 
       <main>
         시작 대시보드 페이지
+        <DashboardContents />
       </main>
     </div>
   )
