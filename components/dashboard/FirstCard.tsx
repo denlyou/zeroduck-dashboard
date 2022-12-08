@@ -1,10 +1,9 @@
 import { Card, CardContent, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
-import { deepPurple } from '@mui/material/colors';
 
 export default function FirstCard(props: any) {
   return (
-    <Card variant="outlined" sx={{ minWidth: 275 }}>
+    <Card variant="outlined">
       <CardContent>
         <Typography variant="h5" component="div">
           Congratulations John! 🥳
