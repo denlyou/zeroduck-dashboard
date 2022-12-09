@@ -1,4 +1,4 @@
-import { Avatar, Box, Card, CardContent, CardHeader, IconButton, Paper, Stack, Typography } from '@mui/material';
+import { Avatar, Card, CardContent, CardHeader, IconButton, Typography } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 interface SubEarningGridCardProps {

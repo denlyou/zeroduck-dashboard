@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardHeader, IconButton, Paper, Stack, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardHeader, IconButton, Stack, Typography } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 export default function TotalEarningCard(props: any) {

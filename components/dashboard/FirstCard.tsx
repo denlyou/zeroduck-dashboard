@@ -1,5 +1,4 @@
-import { Card, CardContent, Typography } from '@mui/material';
-import Button from '@mui/material/Button';
+import { Card, CardContent, Typography, Button } from '@mui/material';
 
 export default function FirstCard(props: any) {
   return (

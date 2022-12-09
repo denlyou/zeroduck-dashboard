@@ -1,4 +1,4 @@
-import { Avatar, Card, CardContent, Typography } from '@mui/material';
+import { Avatar, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
 
 interface StatisticsCardItemProps {

@@ -1,6 +1,5 @@
-import { Card, CardContent, CardHeader, IconButton, Typography } from '@mui/material';
+import { Card, CardContent, CardHeader, Button, IconButton, Typography } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import Button from '@mui/material/Button';
 
 export default function WeeklyOverviewCard(props: any) {
   return (

@@ -1,5 +1,4 @@
-import { Avatar, Card, CardContent, Typography } from '@mui/material';
-import Button from '@mui/material/Button';
+import { Card, CardContent, Typography } from '@mui/material';
 import { yellow, blue, green, deepPurple } from '@mui/material/colors';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
@@ -18,7 +17,6 @@ export default function StatisticsCard(props: any) {
         <Typography variant="body2">
           Total 48.5% growth 😎 this month
         </Typography>
-        
         
         <Grid container spacing={3}>
           <StatisticsCardItem

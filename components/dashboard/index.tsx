@@ -1,8 +1,10 @@
-import { Card, CardContent, CardHeader, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
+import DepositCard from './DepositCard';
 import FirstCard from './FirstCard';
+import SalesbyCountriesCard from './SalesbyCountriesCard';
 import StatisticsCard from './StatisticsCard';
 import SubEarningGrid from './SubEarningGrid';
+import TableCard from './TableCard';
 import TotalEarningCard from './TotalEarningCard';
 import WeeklyOverviewCard from './WeeklyOverviewCard';
 
@@ -16,48 +18,12 @@ export default function DashboardContents(props: any) {
         {/* 2line */}
         <Grid xs={4}><WeeklyOverviewCard /></Grid>
         <Grid xs={4}><TotalEarningCard /></Grid>
-        <Grid xs={4} sx={{padding: 0}}>
-          <SubEarningGrid />
-        </Grid>
-
-        <Grid xs={4}>
-          <Card variant="outlined" sx={{ minWidth: 275 }}>
-            <CardContent>
-              <Typography variant="h5" component="div">
-                Box1
-              </Typography>
-              <Typography variant="body2">
-                well meaning and kindly.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        <Grid xs={8}>
-          <Card variant="outlined" sx={{ minWidth: 275 }}>
-            <CardContent>
-              <Typography variant="h5" component="div">
-                Box1
-              </Typography>
-              <Typography variant="body2">
-                well meaning and kindly.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        <Grid xs={12}>
-          <Card variant="outlined" sx={{ minWidth: 275 }}>
-            <CardContent>
-              <Typography variant="h5" component="div">
-                Box1
-              </Typography>
-              <Typography variant="body2">
-                well meaning and kindly.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+        <Grid xs={4} sx={{padding: 0}}><SubEarningGrid /></Grid>
+        {/* 3line */}
+        <Grid xs={4}><SalesbyCountriesCard /></Grid>
+        <Grid xs={8}><DepositCard /></Grid>
+        {/* 4line */}
+        <Grid xs={12}><TableCard /></Grid>
       </Grid>
     </div>
   );
