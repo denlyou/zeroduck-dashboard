@@ -6,12 +6,14 @@ import StatisticsCard from './StatisticsCard';
 import SubEarningGrid from './SubEarningGrid';
 import TableCard from './TableCard';
 import TotalEarningCard from './TotalEarningCard';
+import WeatherCard from './WeatherCard';
 import WeeklyOverviewCard from './WeeklyOverviewCard';
 
 export default function DashboardContents(props: any) {
   return (
     <div style={ {width: "1200px", margin: "0 auto"} }>
       <Grid container spacing={3}>
+        <Grid xs={12}><WeatherCard /></Grid>
         {/* 1line */}
         <Grid xs={4}><FirstCard /></Grid>
         <Grid xs={8}><StatisticsCard /></Grid>
