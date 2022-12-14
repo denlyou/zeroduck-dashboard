@@ -28,7 +28,7 @@ export default function WeatherCard(props: any) {
     if (weatherInfo != null) return;
     const url = `https://api.openweathermap.org/data/2.5/forecast/?lang=kr&units=metric&id=1843564&cnt=1&appid=${apiKey}`;
     fetch(url).then(resp=>resp.json()).then(res => {
-      console.log(res);
+      // console.log(res);
       setWeatherInfo(res.list[0].weather[0]);
       setTempInfo(res.list[0].main);
     });

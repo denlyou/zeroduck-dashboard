@@ -1,8 +1,27 @@
+import { GetServerSideProps } from 'next'
 import Head from 'next/head'
+import { useEffect } from 'react';
 import DashboardContents from '../components/dashboard'
 import AsideMenu from '../components/layouts/AsideMenu'
+import { ForecastObject } from '../libs/exTypes';
+import useDashboardStore from '../libs/useDashboardStore';
 
-export default function Dashboard() {
+interface DashboardSSProps {
+  forecast: Array<ForecastObject>,
+}
+
+export default function Dashboard(props: DashboardSSProps) {
+  // console.log(props);
+  const [forecast, setForecast] = useDashboardStore(state=>[
+    state.forecast, state.setForecast
+  ]);
+
+  useEffect(()=>{
+    if(forecast.length < 1) {
+      setForecast(props.forecast)
+    }
+  }, []);
+  
   return (
     <div>
       <Head>
@@ -19,4 +38,13 @@ export default function Dashboard() {
       </main>
     </div>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const apiKey = process.env.NEXT_PUBLIC_OPEN_WEATHER_API_KEY;
+  const url = `https://api.openweathermap.org/data/2.5/forecast/?lang=kr&units=metric&id=1843564&appid=${apiKey}`;
+  const res = await( await fetch(url) ).json();
+  return {
+    props: { forecast: res.list },
+  };
 }
