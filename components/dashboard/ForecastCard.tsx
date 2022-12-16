@@ -11,11 +11,11 @@ export default function ForecastCard(props: any) {
   
   return (
     <Card variant="outlined">
-      <CardHeader title="날씨 5일 예보 (3시간 간격)" />
+      <CardHeader title="☂︎ 날씨 5일 예보" />
       <CardContent>
         <Grid container>
           { forecast.map( (item, idx) => {
-            if (idx % 2 == 0) return (<></>); // 반만 표시
+            if (idx % 2 == 0) return (<div key={idx}></div>); // 반만 표시
             const itemSrc = `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`;
             dateObj.setTime( item.dt * 1000 );
             const dateTxt = dateObj.getMonth() + '/' + dateObj.getDate() + ' ' + dateObj.getHours() + ':00'

@@ -14,6 +14,10 @@ export default function DashboardContents(props: any) {
   return (
     <div style={ {width: "1200px", margin: "0 auto"} }>
       <Grid container spacing={3}>
+        <Grid xs={6}><SalesbyCountriesCard /></Grid>
+        <Grid xs={6}><DepositCard /></Grid>
+
+        {/* line */}
         <Grid xs={4}><WeatherCard /></Grid>
         <Grid xs={8}><ForecastCard /></Grid>
         
@@ -28,11 +32,6 @@ export default function DashboardContents(props: any) {
 
         {/* line */}
         <Grid xs={12}><TableCard /></Grid>
-        
-        {/* line */}
-        <Grid xs={4}><SalesbyCountriesCard /></Grid>
-        <Grid xs={8}><DepositCard /></Grid>
-        
       </Grid>
     </div>
   );
