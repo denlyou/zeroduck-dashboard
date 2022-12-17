@@ -226,24 +226,24 @@ const LoginPage = () => {
                                 </Box>
                                 <Divider sx={{ my: 5 }}>or</Divider>
                                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                    <Link href='/' passHref>
+                                    <Link href='/#1' passHref>
                                         <IconButton component='a' onClick={(e: MouseEvent<HTMLElement>) => e.preventDefault()}>
                                             <Facebook sx={{ color: '#497ce2' }} />
                                         </IconButton>
                                     </Link>
-                                    <Link href='/' passHref>
+                                    <Link href='/#2' passHref>
                                         <IconButton component='a' onClick={(e: MouseEvent<HTMLElement>) => e.preventDefault()}>
                                             <Twitter sx={{ color: '#1da1f2' }} />
                                         </IconButton>
                                     </Link>
-                                    <Link href='/' passHref>
+                                    <Link href='/#3' passHref>
                                         <IconButton component='a' onClick={(e: MouseEvent<HTMLElement>) => e.preventDefault()}>
                                             <Github
                                                 sx={{ color: theme => (theme.palette.mode === 'light' ? '#272727' : theme.palette.grey[300]) }}
                                             />
                                         </IconButton>
                                     </Link>
-                                    <Link href='/' passHref>
+                                    <Link href='/#4' passHref>
                                         <IconButton component='a' onClick={(e: MouseEvent<HTMLElement>) => e.preventDefault()}>
                                             <Google sx={{ color: '#db4437' }} />
                                         </IconButton>
@@ -262,6 +262,6 @@ const LoginPage = () => {
     )
 }
 
-LoginPage.getLayout = (page: ReactNode) => <BlankLayout>{page}</BlankLayout>
+// LoginPage.getLayout = (page: ReactNode) => <BlankLayout>{page}</BlankLayout>
 
 export default LoginPage
